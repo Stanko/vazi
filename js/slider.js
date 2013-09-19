@@ -7,7 +7,7 @@ function Slider(selector){
 	this.active = 1;
 
 	if(!this.supportTransitions()){
-		slide.maxTransitionTime = 0;
+		this.maxTransitionTime = 0;
 	}
 
 	this.bindings();
@@ -45,6 +45,11 @@ Slider.prototype.goToSlide = function(slideIndex) {
 
 	this.slides.eq(oldIndex).addClass('out2');
 	this.slides.eq(slideIndex-1).addClass('out').removeClass('noTransition').removeClass('out');
+
+	$('.goto').removeClass('active').eq(slideIndex-1).addClass('active');
+
+	$('.smuti').removeClass('smuti1 smuti2 smuti3 smuti4 smuti5 smuti6').addClass('smuti'+slideIndex);
+	$('.kasice').removeClass('kasice1 kasice2 kasice3 kasice4 kasice5 kasice6').addClass('kasice'+slideIndex);
 
 	setTimeout(function(){
 		$this.slides.eq(oldIndex).addClass('noTransition').addClass('out').removeClass('out2');

@@ -1,0 +1,226 @@
+button, input[type="submit"], input[type="button"]{
+	font-family: $fontFamily;
+	font-weight: $fontWeight;
+	font-size: 1em;
+}
+
+.btn{
+	@include box-sizing(border-box);
+	background: $mainColor;
+	color: #fff;
+	display: inline-block;
+	min-width: 120px;
+	padding: 8px 25px;
+	margin-bottom: 1em;
+	border: 2px solid $mainColor;
+	border-radius: $borderRadius;
+	font-size: 1em;
+	line-height: 1.4em;
+	text-align: center;
+	text-decoration: none;
+
+	&:hover{
+		background-color: $mainColor - $colorDiff;
+		border-color: $mainColor - $colorDiff;
+		color: #fff;
+	}
+	&:focus{
+		color: #fff;
+	}
+
+	&:active{
+		background-color: $mainColor - $colorDiff*2;
+		border-color: $mainColor - $colorDiff*2;
+		top: 1px;
+		color: #fff;
+		position: relative;
+	}
+
+	// SMALL BUTTON
+	&.btnSmall{
+		padding: 4px 15px;
+		min-width: 30px;
+		border-width: 1px;
+		font-size: 0.8em;
+		line-height: 1.2em;
+	}
+	// BIG BUTTON
+	&.btnBig{
+		padding: 12px 45px;
+		min-width: 140px;
+		font-size: 1.4em;
+	}
+
+	// SUCCESS BUTTON
+	&.btnSuccess{
+		background: $successColor;
+		border-color: $successColor;
+
+		&:hover{
+			background: $successColor - $colorDiff;
+			border-color: $successColor - $colorDiff;
+		}
+		&:active{
+			background: $successColor - $colorDiff*2;
+			border-color: $successColor - $colorDiff*2;
+		}
+	}
+
+	// ERROR BUTTON
+	&.btnError{
+		background: $errorColor;
+		border-color: $errorColor;
+
+		&:hover{
+			background: $errorColor - $colorDiff;
+			border-color: $errorColor - $colorDiff;
+		}
+		&:active{
+			background: $errorColor - $colorDiff*2;
+			border-color: $errorColor - $colorDiff*2;
+		}
+	}
+
+	// WARNING BUTTON
+	&.btnWarning{
+		background: $warningColor;
+		border-color: $warningColor;
+
+		&:hover{
+			background: $warningColor - $colorDiff;
+			border-color: $warningColor - $colorDiff;
+		}
+		&:active{
+			background: $warningColor - $colorDiff*2;
+			border-color: $warningColor - $colorDiff*2;
+		}
+	}
+
+	// LIGHT BUTTON
+	&.btnLight{
+		background: $lightColor;
+		border-color: $lightColor;
+		color: $gray3;
+
+		&:hover{
+			background: $lightColor - $colorDiff;
+			border-color: $lightColor - $colorDiff;
+			color: #fff;
+		}
+		&:active{
+			background: $lightColor - $colorDiff*2;
+			border-color: $lightColor - $colorDiff*2;
+			color: #fff;
+		}
+	}
+
+	// DARK BUTTON
+	&.btnDark{
+		background: $darkColor;
+		border-color: $darkColor;
+
+		&:hover{
+			background: $darkColor - $colorDiff;
+			border-color: $darkColor - $colorDiff;
+		}
+		&:active{
+			background: $darkColor - $colorDiff*2;
+			border-color: $darkColor - $colorDiff*2;
+		}
+	}
+
+
+
+	// EMPTY BUTTONS
+	&.btnEmpty{
+		border-radius: $bigBorderRadius;
+		color: $mainColor;
+		background: #fff;
+
+		&:hover{
+			background: #fff;
+			color: $mainColor - $colorDiff;
+		}
+		&:active{
+			background: #fff;
+			color: $mainColor - $colorDiff*2;
+		}
+
+		// SUCCESS BUTTON
+		&.btnSuccess{
+			border-color: $successColor;
+			color: $successColor;
+
+			&:hover{
+				border-color: $successColor - $colorDiff;
+				color: $successColor - $colorDiff;
+			}
+			&:active{
+				border-color: $successColor - $colorDiff*2;
+				color: $successColor - $colorDiff*2;
+			}
+		}
+
+		// ERROR BUTTON
+		&.btnError{
+			border-color: $errorColor;
+			color: $errorColor;
+
+			&:hover{
+				border-color: $errorColor - $colorDiff;
+				color: $errorColor - $colorDiff;
+			}
+			&:active{
+				border-color: $errorColor - $colorDiff*2;
+				color: $errorColor - $colorDiff*2;
+			}
+		}
+
+		// WARNING BUTTON
+		&.btnWarning{
+			border-color: $warningColor;
+			color: $warningColor;
+
+			&:hover{
+				border-color: $warningColor - $colorDiff;
+				color: $warningColor - $colorDiff;
+			}
+			&:active{
+				border-color: $warningColor - $colorDiff*2;
+				color: $warningColor - $colorDiff*2;
+			}
+		}
+
+		// LIGHT BUTTON
+		&.btnLight{
+			border-color: $gray2;
+			color: $gray3;
+
+			&:hover{
+				border-color: $lightColor - $colorDiff;
+				color: $gray3 - $colorDiff;
+			}
+			&:active{
+				border-color: $lightColor - $colorDiff*2;
+				color: $gray3 - $colorDiff*2;
+			}
+		}
+
+		// DARK BUTTON
+		&.btnDark{
+			border-color: $darkColor;
+			color: $darkColor;
+
+			&:hover{
+				border-color: $darkColor - $colorDiff;
+				color: $darkColor - $colorDiff;
+			}
+			&:active{
+				border-color: $darkColor - $colorDiff*2;
+				color: $darkColor - $colorDiff*2;
+			}
+		}
+	}
+
+
+}

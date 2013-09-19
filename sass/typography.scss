@@ -1,0 +1,133 @@
+// Headers
+h1,h2,h3,h4,h5,h6{
+	line-height: 1.2em;
+	margin-bottom: 0.1em;
+	margin-top: 0;
+	font-weight: 800;
+}
+
+h1{
+	font-size: 2.5em;
+}
+
+h2{
+	font-size: 2.2em;
+}
+
+h3{
+	font-size: 1.8em;
+}
+
+h4{
+	font-size: 1.5em;
+}
+
+h5{
+	font-size: 1.3em;
+}
+
+h6{
+	font-size: 1.1em;
+}
+
+
+
+// Paragraphs
+p{
+	margin-bottom: 1em;
+	line-height: $lineHeight;
+}
+small{
+	font-size: 0.8em;
+}
+.big{
+	font-size: 1.2em;
+}
+
+b, strong{
+	font-weight: $bold;
+}
+i, em{
+	font-style: italic;
+}
+
+
+
+// Lists
+ul, ol{
+	margin-bottom: 1em;
+	padding-left: 22px;
+	ul, ol{
+		margin-bottom: 0;
+	}
+}
+
+ul{
+	li{
+		list-style: disc outside none;
+		li{
+			list-style: circle outside none;
+		}
+	}
+}
+
+ol{
+	li{
+		list-style: decimal outside none;
+	}
+}
+
+
+// Blockquote
+blockquote{
+	@include box-sizing(border-box);
+	border-left: 2px solid $gray2;
+	padding: 0.5em 1em;
+	margin-bottom: 1em;
+	font-size: 1.1em;
+	color: $gray5;
+
+	cite{
+		font-size: 0.8em;
+		&:before {
+		    content: "— ";
+		}
+	}
+}
+
+hr{
+	border: 0;
+	border-bottom: 1px solid $gray2;
+	margin: 20px 0 20px 0;
+	clear: both;
+}
+
+
+
+// Code
+pre, code{
+	@include box-sizing(border-box);
+
+	font-family: $preFontFamily;
+	font-size: $preFontSize;
+	line-height: $lineHeight;
+
+	color: $gray2;
+	background: $gray6;
+	// border: 2px solid $gray2;
+	border-radius: 3px;
+
+	padding: 0.8em 1em;
+
+	white-space: pre-wrap;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+pre{
+	margin-bottom: $fontSize;
+}
+code{
+	display: inline-block;
+	padding: 0.1em 0.3em;
+}
+

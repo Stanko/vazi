@@ -1,0 +1,15 @@
+.round{
+	a{
+		width: 100px;
+		height: 130px;
+	}
+}
+
+.slider{
+	> div{
+		&.out, &.out2{
+			display: none;
+		}
+		display: block;
+	}
+}

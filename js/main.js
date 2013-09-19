@@ -1,17 +1,18 @@
-$(function(){
+$(document).ready(function(){
 	// MENU LAVA
-	var lava = $('.lava'),
-		offset = 14,
-		lavaTimeout = false;
+	// var lava = $('.lava'),
+	// 	offset = 14,
+	// 	lavaTimeout = false;
 
-	function fixLava(){
-		lava.css({
-			'left': $('.menu a.active').offset().left + offset / 2,
-			'width': $('.menu a.active').outerWidth() - offset
-		}).show();
-	}
+	// function fixLava(){
+	// 	lava.css({
+	// 		'left': $('.menu a.active').offset().left + offset / 2,
+	// 		'width': $('.menu a.active').outerWidth() - offset
+	// 	}).show();
+	// }
 
-	fixLava();
+	// fixLava();
+	// $(window).resize(fixLava);
 
 	$('.menu span a').hover(function(){
 		clearTimeout(lavaTimeout);
@@ -30,7 +31,7 @@ $(function(){
 		}, 300);
 	});
 
-	$(window).resize(fixLava);
+
 
 
 	var logoAndMenu = $('.logo, .menu');
@@ -45,7 +46,21 @@ $(function(){
 		}
 	}
 	$(window).scroll(fixMenu);
+	fixMenu();
+
+	var slider = new Slider('.slider'),
+		day = new Date().getDay();
+
+	if(day >= 1 && day <= 6){
+		slider.goToSlide(day);
+	}
 
 
-	var slider = new Slider('.slider');
+	// Posebne
+	$('.posebneLink').click(function(){
+		$('.posebna').fadeIn();
+	});
+	$('.posebna').click(function(){
+		$('.posebna').fadeOut();
+	});
 });

@@ -1,0 +1,8 @@
+.round a {
+  width: 100px;
+  height: 130px; }
+
+.slider > div {
+  display: block; }
+  .slider > div.out, .slider > div.out2 {
+    display: none; }

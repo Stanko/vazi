@@ -1,0 +1,75 @@
+// Grays
+$gray7:				#1f2c2d;
+$gray6:				#353839;
+$gray5:				#5f6c6d;
+$gray4:				#7f8c8d;
+$gray3:				#95a5a6;
+$gray2:				#dae0e4;
+$gray1:				#f5f7f8;
+
+// Maybe use these?
+// grays
+// #ecf0f1
+// #bdc3c7
+// #95a5a6
+// #7f8c8d
+
+// Dark navy/gray
+// #34495e
+// #2c3e50
+
+// green #2ecc71 #27ae60
+// violet #9b59b6 #8e44ad
+
+// Colors
+$bodyBackground:		$gray1;
+$textColor:				$gray5;
+
+$mainColor:				#49d;
+$successColor:			#1ABC9C;
+$errorColor:			#E74C3C;
+$warningColor:			#F1C000;
+$lightColor:			#ecf0f1;
+$darkColor:				#34495e;
+
+$navigationColor:		#2c3e50;
+
+$colorDiff:				#222;
+
+// Defaults
+$fontFamily:			"Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$fontSize:				16px;
+$fontWeight:			300;
+$lineHeight:			1.4em;
+$bold:					500;
+
+// Code
+$preFontFamily:			"DejaVu Sans Mono", Monaco, Menlo, Consolas, "Courier New", monospace;
+$preFontSize:			13px;
+
+
+// Tables
+$tableBorderColor:		$gray2;
+$tableBackground:		$gray1;
+$tableBackgroundHover:	$gray2;
+$tableColorHover:		$gray7;
+
+// Grid
+$gridColumns:			12;
+$gridPaddingWidth:		30px;
+$gridUnitWidth:			100% / $gridColumns;
+
+$containerWidthTablet:		720px;
+$containerWidthDesktop:		940px;
+$containerWidthBigDesktop:	1150px;
+
+$gridSpanClasses:		'.span1, .span2, .span3, .span4, .span5, .span6, .span7, .span8, .span9, .span10, .span11, .span12';
+$gridSpanMobileClasses:	'.spanMobile1, .spanMobile2, .spanMobile3, .spanMobile4, .spanMobile5, .spanMobile6, .spanMobile7, .spanMobile8, .spanMobile9, .spanMobile10, .spanMobile11, .spanMobile12';
+
+// Forms
+$inputWidth:			300px;
+
+// Helpers
+$borderRadius:			3px;
+$bigBorderRadius:		20px;
+
