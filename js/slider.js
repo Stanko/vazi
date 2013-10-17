@@ -17,7 +17,7 @@ Slider.prototype.bindings = function() {
 	var $this = this;
 	$('.prev').click(function(){ $this.previousSlide(); });
 	$('.next').click(function(){ $this.nextSlide(); });
-	$('.goto').click(function(){ $this.goToSlide($(this).data('index')); });
+	$('.goto').click(function(){ $this.goToSlide($(this).data('index')); $(window).scrollTop(760) });
 };
 
 

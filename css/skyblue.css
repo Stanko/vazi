@@ -228,6 +228,21 @@ a {
       margin-top: 10px;
       width: 140px;
       height: 140px; }
+  .header .radnoVreme {
+    background: #087077;
+    background-image: url("../img/noise.png");
+    background-repeat: repeat;
+    color: #e5d4b1;
+    position: absolute;
+    bottom: 45px;
+    padding: 8px 0;
+    width: 380px;
+    left: 50%;
+    margin-left: -190px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); }
   .header .waves {
     background: transparent url("../img/wave2.png") repeat-x;
     height: 26px;
@@ -244,7 +259,7 @@ a {
     font-weight: 800;
     font-size: 47px;
     text-transform: uppercase;
-    text-shadow: 1px 1px 1px #fff; }
+    text-shadow: 1px 1px 1px #fff2d7; }
   .hero p {
     margin-top: 4px;
     margin-bottom: 0;
@@ -402,7 +417,7 @@ a {
   .smutiKasu .description {
     font-size: 16px; }
 
-.posebna {
+.posebna, .kontakt {
   display: none;
   height: 100%;
   width: 100%;
@@ -413,7 +428,7 @@ a {
   left: 0;
   right: 0;
   z-index: 1500; }
-  .posebna .center {
+  .posebna .center, .kontakt .center {
     margin: 100px auto 0;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -424,10 +439,72 @@ a {
     color: #e5d4b1;
     text-align: center;
     padding: 60px 80px; }
-    .posebna .center h3 {
+    .posebna .center h3, .kontakt .center h3 {
       margin-bottom: 15px; }
-    .posebna .center p {
+    .posebna .center p, .kontakt .center p {
       font-size: 20px; }
+
+.kontakt {
+  text-align: center;
+  font-size: 20px; }
+  .kontakt input, .kontakt label, .kontakt textarea {
+    display: inline-block; }
+  .kontakt input, .kontakt textarea {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    width: 80%;
+    border: 1px solid #e5d4b1;
+    border-radius: 5px;
+    background: #eddfc4;
+    padding: 10px;
+    opacity: 0.8;
+    font-size: 18px; }
+    .kontakt input:focus, .kontakt textarea:focus {
+      outline: none;
+      opacity: 1; }
+  .kontakt input {
+    margin-bottom: 10px; }
+  .kontakt textarea {
+    margin-bottom: 10px;
+    height: 100px;
+    font-size: 16px; }
+  .kontakt button {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 10px 50px;
+    background: #054c51;
+    color: #e5d4b1;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px; }
+    .kontakt button:hover, .kontakt button:focus {
+      outline: none;
+      background: #003b40; }
+    .kontakt button:active {
+      background: #002a2f;
+      outline: none; }
+  .kontakt h4 {
+    font-size: 24px;
+    margin-bottom: 20px; }
+  .kontakt .center {
+    padding: 50px 80px; }
+  .kontakt #contactError {
+    font-size: 16px; }
+
+.dostava {
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background: #e5d4b1;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px 20px;
+  display: inline-block; }
+
+.font18 {
+  font-size: 18px; }
+
+#contactName {
+  height: 0;
+  position: absolute;
+  left: -100000px; }
 
 .footer {
   padding: 40px 0; }

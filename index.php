@@ -27,20 +27,21 @@
 </head>
 <body>
 
-<div class="header">
-	<div class="cart">
+<div class="header" id="home">
+<!-- 	<div class="cart">
 		KORPA
-	</div>
+	</div> -->
 	<div class="menu">
 		<span>
-			<a href="#">Početna</a><a class="active" href="#menu">Meni</a><a class="posebneLink" href="javascript:void(0)">Posebne porudžbine</a><a href="#">Kontakt</a>
+			<a href="#home" class="active homeLink">Početna</a><a class="menuLink" href="#menu">Meni</a><a class="posebneLink" href="javascript:void(0)">Posebne porudžbine</a><a href="javascript:void(0);" class="kontaktLink">Kontakt</a>
 			<div class="contact">064 / 576 55 88</div>
-			<!-- <div class="lava"></div> -->
+			<div class="lava"></div>
 		</span>
 		<!-- <a href="#" class="cartLink">Korpa</a> -->
 
 	</div>
 	<img class="logo" src="img/logo.png" />
+	<div class="radnoVreme">09:00 - 17:00, &nbsp; subotom: 09:00 - 15:00</div>
 	<div class="waves"></div>
 </div>
 
@@ -48,13 +49,12 @@
 	<div class="row marginBottom1em zdrava">
 		<div class="span6 textRight">
 			<h2>Zdrava hrana je i ukusna hrana!</h2>
-			<div class="oldSaying">(Ona stara poslovica više ne važi)</div>
+			<!-- <div class="oldSaying">(Ona stara poslovica više ne važi)</div> -->
 		</div>
 		<div class="span6">
 			<p>
-			Napravite mesta za malo novih boja mirisa i ukusa, a mi ćemo za Vas da
-			oslikamo nove obroke, koji ce biti zdravi, ukusni i maštoviti.
-
+			Napravite mesta za malo novih boja, mirisa i ukusa, a mi ćemo za Vas da
+			oslikamo nove obroke, koji će biti zdravi, ukusni i maštoviti.
 			</p>
 		</div>
 	</div>
@@ -63,18 +63,25 @@
 
 <div class="lightStripe textCenter">
 	<div class="container">
-		<p>
-			Nudimo Vam izvrsnu hranu pripremljenu u domaćoj radinosti.<br/>
+		<p class="font18">
+			Nudimo Vam kvalitetnu hranu pripremljenu u domaćoj radinosti.<br/>
 			Svi obroci su vegeterijanski i pravljeni su od svežih namirnica, mahunarki, žitarica, povrća i voća.<br/>
 			Za svaki dan imamo pripremljen izbalansiran, jedinstven obrok.
 		</p>
+
+
+		<div class="dostava textCenter">
+			Minimalan iznos za naručivanje je 600 dinara.<br/>
+			Dostavu radimo za centar, Novi Beograd, Bežanijska Kosu, Banovo Brdo, Žarkovo i Cerak.
+		</div>
+
 
 		<h2 id="menu">
 			MENI
 		</h2>
 
 		<div class="round">
-			<a href="javascript:void(0)" class="goto" data-index="1">
+			<a href="javascript:void(0)" class="goto active" data-index="1">
 				<img src="img/circle/1.jpg" />
 				Ponedeljak
 			</a>
@@ -132,17 +139,17 @@
 			<div class="span6">
 				<div class="item">
 					<div class="name">
-						Malina, kranč žitarice, banana, lan
+						Malina, žitarice, banana, lan
 					</div>
 				</div>
 				<div class="item">
 					<div class="name">
-						Crveno voće, kranč žitarice, banana, lan
+						Crveno voće, žitarice, banana, lan
 					</div>
 				</div>
 				<div class="item">
 					<div class="name">
-						Sezonsko voće, kranč žitarice, med
+						Sezonsko voće, žitarice, med
 					</div>
 				</div>
 				<div class="item">
@@ -156,7 +163,7 @@
 					</div>
 				</div>
 				<div class="textRight">
-					<img src="img/kasica.jpg" /><br/>
+					<img src="img/kasica.jpg" />
 					<img src="img/smuti.jpg" />
 				</div>
 			</div>
@@ -166,7 +173,7 @@
 						Ječam, sezonsko voće, orašasti plodovi, med
 					</div>
 				</div>
-				<div class="item">
+<!-- 				<div class="item">
 					<div class="name">
 						Pirinač, jabuka, suvo grožđe, orašasti plodovi, cimet, med
 					</div>
@@ -175,7 +182,7 @@
 					<div class="name">
 						Pšenica, crveno voće, suve brusnice, muskatni oraščić, med
 					</div>
-				</div>
+				</div> -->
 				<div class="item">
 					<div class="name">
 						Kukuruzni griz, proso, suva brusnica, bademi, med
@@ -196,11 +203,11 @@
 						Mix pahuljica (ječmene, ovsene, pšenične,ražene, spelta), suvo voće, cimet, med
 					</div>
 				</div>
-				<div class="item">
+<!-- 				<div class="item">
 					<div class="name">
 						Kukuruzni griz, proso, spanać, sir, morska so
 					</div>
-				</div>
+				</div> -->
 
 				<div class="item">
 					<div class="name">
@@ -222,7 +229,9 @@
 	<div class="row">
 		<div class="span4 offset2 textRight">
 			<p>
-				VOLIMO PRIRODU I ČUVAJMO JE, ŽIVOTINJE, BRINIMO O NJIMA, I LJUDE, NASMEŠIMO SE JEDNI DRUGIMA!
+				VOLIMO PRIRODU I ČUVAJMO JE!<br/>
+				BRINIMO O ŽIVOTINJAMA I LJUDIMA!<br/>
+				NASMEŠIMO SE JEDNI DRUGIMA!
 			</p>
 			<p>
 				MISLIMO ZDRAVO!
@@ -248,6 +257,23 @@
 
 	</div>
 </div>
+
+
+<div class="kontakt">
+	<div class="center">
+		<h4>Kontakt</h4>
+		<form id="contactForm">
+			<label>Vaš email</label><br/>
+			<input type="text" id="contactEmail" /></br/>
+			<input type="text" id="contactName" />
+			<label>Poruka</label><br/>
+			<textarea id="contactMessage"></textarea></br>
+			<button type="submit" id="contactSubmit">Pošalji</button>
+			<div id="contactError"></div>
+		</form>
+	</div>
+</div>
+
 
 
 </body>

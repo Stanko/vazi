@@ -153,6 +153,22 @@ a {
 		}
 	}
 
+	.radnoVreme{
+		background: $green;
+		@include noise();
+		color: $oker;
+		position: absolute;
+		bottom: 45px;
+		padding: 8px 0;
+		width: 380px;
+		left: 50%;
+		margin-left: -190px;
+		font-size: 18px;
+		font-weight: 600;
+		border-radius: 5px;
+		box-shadow: 0 0 20px rgba(0,0,0,0.8);
+	}
+
 	.waves{
 		background: transparent url('../img/wave2.png') repeat-x;
 		height: 26px;
@@ -172,7 +188,7 @@ a {
 		font-weight: 800;
 		font-size: 47px;
 		text-transform: uppercase;
-		text-shadow: 1px 1px 1px #fff;
+		text-shadow: 1px 1px 1px $okerLight + #131313;
 	}
 
 	p{
@@ -359,7 +375,7 @@ a {
 	}
 }
 
-.posebna{
+.posebna, .kontakt{
 	display: none;
 	height: 100%;
 	width: 100%;
@@ -391,6 +407,81 @@ a {
 	}
 }
 
+.kontakt{
+	text-align: center;
+	font-size: 20px;
+	input, label, textarea{
+		display: inline-block;
+	}
+	input, textarea{
+		font-family: $fontFamily;
+		width: 80%;
+		border: 1px solid $oker;
+		border-radius: 5px;
+		background: $okerLight;
+		padding: 10px;
+		opacity: 0.8;
+		font-size: 18px;
+
+		&:focus{
+			outline: none;
+			opacity: 1;
+		}
+	}
+	input{
+		margin-bottom: 10px;
+	}
+	textarea{
+		margin-bottom: 10px;
+		height: 100px;
+		font-size: 16px;
+	}
+	button{
+		font-family: $fontFamily;
+		padding: 10px 50px;
+		background: $greenDarker;
+		color: $oker;
+		font-size: 18px;
+		border: none;
+		border-radius: 5px;
+		&:hover, &:focus{
+			outline: none;
+			background: $greenDarker - #111;
+		}
+		&:active{
+			background: $greenDarker - #222;
+			outline: none;
+		}
+	}
+	h4{
+		font-size: 24px;
+		margin-bottom: 20px;
+	}
+	.center{
+		padding: 50px 80px;
+	}
+	#contactError{
+		font-size: 16px;
+	}
+}
+
+.dostava{
+	margin-bottom: 20px;
+	border-radius: 10px;
+	background: $oker;
+	font-size: 18px;
+	font-weight: 600;
+	padding: 10px 20px;
+	display: inline-block;
+}
+
+.font18{ font-size: 18px; }
+
+#contactName{
+	height: 0;
+	position: absolute;
+	left: -100000px;
+}
 
 .footer{
 	padding: $padding 0;

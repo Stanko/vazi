@@ -1,18 +1,18 @@
 $(document).ready(function(){
 	// MENU LAVA
-	// var lava = $('.lava'),
-	// 	offset = 14,
-	// 	lavaTimeout = false;
+	var lava = $('.lava'),
+		offset = 14,
+		lavaTimeout = false;
 
-	// function fixLava(){
-	// 	lava.css({
-	// 		'left': $('.menu a.active').offset().left + offset / 2,
-	// 		'width': $('.menu a.active').outerWidth() - offset
-	// 	}).show();
-	// }
+	function fixLava(){
+		lava.css({
+			'left': $('.menu a.active').offset().left + offset / 2,
+			'width': $('.menu a.active').outerWidth() - offset
+		}).show();
+	}
 
-	// fixLava();
-	// $(window).resize(fixLava);
+	fixLava();
+	$(window).resize(fixLava);
 
 	$('.menu span a').hover(function(){
 		clearTimeout(lavaTimeout);
@@ -44,6 +44,21 @@ $(document).ready(function(){
 		else{
 			logoAndMenu.removeClass('small');
 		}
+
+		var link;
+		if($(window).scrollTop() >= 620){
+			link = $('.menuLink');
+			link.addClass('active').siblings().removeClass('active');
+		}
+		else{
+			link = $('.homeLink');
+			link.addClass('active').siblings().removeClass('active');
+		}
+
+		lava.stop().animate({
+			'left': link.offset().left + offset / 2,
+			'width': link.outerWidth() - offset
+		}).show();
 	}
 	$(window).scroll(fixMenu);
 	fixMenu();
@@ -55,12 +70,69 @@ $(document).ready(function(){
 		slider.goToSlide(day);
 	}
 
-
 	// Posebne
 	$('.posebneLink').click(function(){
 		$('.posebna').fadeIn();
 	});
-	$('.posebna').click(function(){
-		$('.posebna').fadeOut();
+	$('.posebna, .kontakt').click(function(){
+		$('.posebna, .kontakt').fadeOut();
+	});
+
+
+	// Kontakt
+	$('.kontaktLink').click(function(){
+		$('.kontakt').fadeIn();
+	});
+	$('.kontakt .center').click(function(e){
+		e.stopPropagation();
+	});
+
+
+
+	$('#contactForm').on('submit' , function(){
+		var email = $("#contactEmail").val(),
+			message = $("#contactMessage").val(),
+			name = $("#contactName").val();
+
+		if(!(email.search(/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/) != -1) || email.length<5){
+			$('#contactError').html('Sva polja su obavezna');
+			return false;
+		}
+
+		if(message.length < 2){
+			$('#contactError').html('Sva polja su obavezna');
+			return false;
+		}
+
+		$('#contactError').html('&nbsp;');
+		$('#contactSubmit').html('Loading...').attr('disabled', 'disabled');
+
+		$.ajax({
+			url: 'contactMail.php',
+			type: 'post',
+			data: {
+				'email' : email,
+				'name' : name,
+				'message' : message
+			},
+			dataType: 'json',
+			success: function(response){
+				if(response){
+					$('#contactError').html('Vaša poruka je poslata, hvala!');
+					$("#contactEmail").val('');
+					$("#contactMessage").val('');
+				}
+				else{
+					$('#contactError').html('Greška, pokušajte opet');
+				}
+				$('#contactSubmit').html('Pošalji').attr('disabled', null);
+			},
+			error: function() {
+				$('#contactError').html('Greška, pokušajte opet');
+				$('#contactSubmit').html('Pošalji').attr('disabled', null);
+			}
+		});
+
+		return false;
 	});
 });

@@ -29,7 +29,7 @@
 						Ćućke i grašak
 						<div class="description">
 							(Ćućke: crni luk, beli luk, šargarepa, pasulj, proso, indijski orah, prezla,<br/>
-							maslinovohladno ceđeno ulje, začini)
+							maslinovo hladno ceđeno ulje, začini)
 						</div>
 						<div class="description">
 							(Grašak: crni luk, šargarepa, grašak, paradajz, suncokretovo nerafinisano ulje, začini)
