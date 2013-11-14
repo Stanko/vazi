@@ -3,7 +3,7 @@
 <head>
 	<title>Važi - Misli zdravo - Zdrava hrana</title>
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,700,800&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-	<meta http-equiv="Content-Type" content="text/html charset=utf-8"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 	<link rel="stylesheet" href="css/skyblue.css">
 
@@ -259,6 +259,20 @@
 </div>
 
 
+<div class="alert">
+	<div class="center">
+		<h4>Obaveštenje</h4>
+		<p style="font-size: 18px; margin-top: 15px;">
+			Sa velikom žalošću vas informišemo da potpuno neočekivano i neplanirano obustavljamo rad do daljnjeg.<br/><br/>
+			Hvala svima koji su nas podržali i ručkali naše obroke, nadamo se da ćemo vas uskoro opet uslužiti. Možda i u nekom drugom formatu.<br/><br/>
+			Do tad mislite zdravo ;)<br/>
+			Važi!
+		</p>
+
+	</div>
+</div>
+
+
 <div class="kontakt">
 	<div class="center">
 		<h4>Kontakt</h4>
@@ -274,7 +288,19 @@
 	</div>
 </div>
 
+<script type="text/javascript">
 
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-44933336-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 
 </body>
 </html>
